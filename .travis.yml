@@ -4,7 +4,7 @@ python: "2.7"
 before_install:
   - sudo apt-get update -qq
 install:
-  - pip install ansible==1.5.0
+  - pip install ansible==1.6.0
 script:
   - ansible-playbook -i tests/inventory tests/test.yml --syntax-check
   - ansible-playbook -i tests/inventory tests/test.yml --connection=local --sudo
