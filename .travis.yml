@@ -8,5 +8,7 @@ install:
 script:
   - ansible-playbook -i tests/inventory tests/test.yml --syntax-check
   - ansible-playbook -i tests/inventory tests/test.yml --connection=local --sudo
+# Test using CD
+  - ansible-playbook -i tests/inventory tests/test.yml --connection=local --sudo -CD
 # Test, if next play will result with no changes
   - ansible-playbook -i tests/inventory tests/test.yml --connection=local --sudo
